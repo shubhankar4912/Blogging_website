@@ -1,0 +1,14 @@
+node_modules
+dist
+.wrangler
+.dev.vars
+# Ignore .env file
+.env
+
+# Ignore .toml files
+*.toml
+# Change them to your taste:
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
