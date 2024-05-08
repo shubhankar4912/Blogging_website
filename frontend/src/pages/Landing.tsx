@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function Landing() {
   return (
     <div className="flex flex-col h-screen bg-white">
-      {/* Navigation bar */}
+    
       <nav className="flex justify-between items-center px-6 py-4 bg-gray-800 text-white">
         <div className="text-2xl font-bold">Medium</div>
         <Link
@@ -15,7 +15,7 @@ function Landing() {
         </Link>
       </nav>
 
-      {/* Main content */}
+ 
       <div className="flex flex-col justify-center items-center flex-1">
         <div className="transition ease-in-out delay-150 hover:scale-110 text-black text-4xl mb-8">
           <TypingEffect text="Write your Blog" />
@@ -40,7 +40,7 @@ function TypingEffect({ text }: { text: string }) {
           return text.slice(0, currentIndex);
         }
       });
-    }, 100); // Adjust typing speed as needed
+    }, 100); 
 
     return () => clearInterval(interval);
   }, [text]);
