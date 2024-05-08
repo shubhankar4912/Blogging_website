@@ -2,7 +2,7 @@ import {Link} from "react-router-dom"
 
 interface BlogCardProps{
     authorName:string;
-    title:string;
+    tilte:string;
     content:string;
     publishedDate:string;
     id:string;
@@ -10,7 +10,7 @@ interface BlogCardProps{
 export const BlogCard = ({
     id,
     authorName,
-    title,
+    tilte,
     content,
     publishedDate
 }: BlogCardProps)=>{
@@ -23,10 +23,15 @@ export const BlogCard = ({
                 </div>
                 <div className="pl-2 font-thin text-slate-500 text-sm flex justify-center flex-col">
                     {publishedDate}
+                    <div className="text-xl font-semibold pt-2">
+                    {tilte}
                 </div>
-                <div className="text-xl font-semibold pt-2">
-                    {title}
+                <div className="text-md font-thin">
+                {content.slice(0, 100) + "..."}
                 </div>
+                </div>
+
+
                 <div className="text-slate-500 text-sm font-thin pt-4">{`${Math.ceil(content.length / 100)} minute(s) read`}</div>
             </div>
         </div>
