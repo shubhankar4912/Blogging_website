@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { ChangeEvent, useState } from "react";
 
 export const Publish = () => {
-    const [tilte, setTitle] = useState("");
+    const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const navigate = useNavigate();
 
@@ -22,7 +22,7 @@ export const Publish = () => {
                 }} />
                 <button onClick={async () => {
                     const response = await axios.post(`${BACKEND_URL}/api/v1/blog`, {
-                        tilte,
+                        title,
                         content: description
                     }, {
                         headers: {
